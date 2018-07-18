@@ -35,6 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+/* this is that whole section ..add display: flex;/flex-direction: column;*/
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
@@ -109,6 +110,7 @@ nav h1 a {
   height: 50px;
   background-color: #3397DB;
   align-items: center;
+  /*add padding padding: 15px 0; also maybe remove hard set height*/
 }
 .filter-options h2 {
   color: white;
@@ -135,8 +137,9 @@ nav h1 a {
   list-style: outside none none;
   margin: 0;
   padding: 30px 15px 60px;
-  text-align: center;
+  text-align: center; /*display:flex;,flex-direction:row;, flex-wrap:wrap;. justify-content:center for last rest to be in middle*/
 }
+/* min-width: 270, max-width: 300 and then some media queries. @media only screen and (min-width: 0px) {#restaurants-list li{ max-width: 100%;} ...min 714px/45%....1032px 308px*/
 #restaurants-list li {
   background-color: #fff;
   border: 2px solid #ccc;
@@ -152,7 +155,7 @@ nav h1 a {
   display: block;
   margin: 0;
   max-width: 100%;
-  min-height: 248px;
+  min-height: 248px;/*maybe take out and add max and a resturants-list .restuarant-text-area*/
   min-width: 100%;
 }
 #restaurants-list li h1 {
