@@ -1,12 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 
-body,
-td,
-th,
-p {
+body,td,th,p {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   color: #333;
   line-height: 1.5;
 }
@@ -18,8 +15,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-ul,
-li {
+ul,li {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10pt;
   color: #333;
@@ -28,35 +24,18 @@ a {
   color: orange;
   text-decoration: none;
 }
-a:hover,
-a:focus {
+a:hover,a:focus {
   color: #3397db;
   text-decoration: none;
 }
 a img {
   border: none 0px #fff;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 20px;
 }
-article,
-aside,
-canvas,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
   display: block;
 }
 #maincontent {
@@ -67,8 +46,8 @@ section {
 }
 #footer {
   background-color: #444;
-  color: #b3b3b3;
-  font-size: 8pt;
+  color: #aaa;
+  font-size: 10px;
   letter-spacing: 1px;
   padding: 25px;
   text-align: center;
@@ -87,7 +66,7 @@ nav h1 {
 }
 nav h1 a {
   color: #fff;
-  font-size: 20px;
+  font-size: 12px;
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
@@ -96,7 +75,7 @@ nav h1 a {
   padding: 10px;
   list-style: none;
   background-color: #eee;
-  font-size: 17px;
+  font-size: 12px;
   margin: 0;
   max-width: 100%;
 }
@@ -109,13 +88,13 @@ nav h1 a {
 /* Add a slash symbol (/) before/behind each list item */
 #breadcrumb li + li:before {
   padding: 8px;
-  color: black;
+  color: darkred;
   content: "/\00a0";
 }
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-  color: #026ac5;
+  color: #01447e;
   text-decoration: none;
 }
 
@@ -133,7 +112,7 @@ nav h1 a {
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
-  background-color: #262932;
+  background-color: #6a7596;
   align-items: center;
   padding: 15px 0;
 }
