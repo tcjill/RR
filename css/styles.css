@@ -162,12 +162,12 @@ nav h1 a {
     max-width: 100%;
   }
 }
-@media only screen and (min-width: 765px) {
+@media only screen and (min-width: 731px) {
   #restaurants-list li {
     max-width: 45%;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
   #restaurants-list li {
     max-width: 300px;
   }
