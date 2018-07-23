@@ -22,6 +22,8 @@ ul,li {
 }
 a {
   color: orange;
+  
+  font-size: 15pt;
   text-decoration: none;
 }
 a:hover,a:focus {
