@@ -28,5 +28,13 @@ This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://w
 
 Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
 
+### Sources and References for this Restaurant Review FEND Project ###
+https://www.youtube.com/watch?v=jsGs9z7TuyY  M. Riaad
+https://www.youtube.com/watch?v=92dtrNU1GQc&t=3141s&index=3&list=PLtLkyQzsP3mjkzAzRv-DQoULlC3BaUm1d D. Brown
+https://www.youtube.com/watch?v=BfL3pprhnms bitsofcode
+Slack and Facebook FEND students.
+https://jakearchibald.com/2014/offline-cookbook/ J. Archibald
+
+
 
 
