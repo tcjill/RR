@@ -1,4 +1,4 @@
-var cacheID = "Restaurant Reviews";
+var cacheID = "Restaurant Reviews Cached";
 
 self.addEventListener("install", event => {
   event.waitUntil(
@@ -6,17 +6,24 @@ self.addEventListener("install", event => {
       return cache
         .addAll([
           "/",
-          "/index.html",
-          "/restaurant.html",
-          "/css/styles.css",
-          "/data/restaurants.json",
-          "/js/",
-          "/js/dbhelper.js",
-          "/js/main.js",
-          "/js/restaurant_info.js",
-          
-          "/js/register.js"
-        ])
+      "./index.html",
+      "./restaurant.html",
+      "./css/styles.css",
+      "./js/main.js",
+      "./js/restaurant_info.js",
+      "./js/dbhelper.js",
+      "./data/restaurants.json",
+      "./img/1.jpg",
+      "./img/2.jpg",
+      "./img/3.jpg",
+      "./img/4.jpg",
+      "./img/5.jpg",
+      "./img/6.jpg",
+      "./img/7.jpg",
+      "./img/8.jpg",
+      "./img/9.jpg",
+      "./img/10.jpg"
+      ])
         .catch(error => {
           console.log("Caches open failed: " + error);
         });
@@ -24,38 +31,38 @@ self.addEventListener("install", event => {
   );
 });
 
-self.addEventListener("fetch", event => {
-  let cacheRequest = event.request;
-  let cacheUrlObj = new URL(event.request.url);
-  if (event.request.url.indexOf("restaurant.html") > -1) {
-    const cacheURL = "restaurant.html";
-    cacheRequest = new Request(cacheURL);
-  }
-  if (cacheUrlObj.hostname !== "localhost") {
-    event.request.mode = "no-cors";
-  }
+self.addEventListener("install", event => {
+  event.waitUntil(
+      caches.open(staticCacheName).then((cache) => {
+          console.log(cache);
+          return cache.addAll(urlsToCache);
 
+      }).catch((error) => {
+          console.log(error);
+      })
+  );
+});
+
+self.addEventListener("activate", event => {
+  event.waitUntil(
+      caches.keys().then((cacheNames) => {
+          return Promise.all(
+              cacheNames.filter((cacheName) => {
+                  return cacheName.startsWith("restaurant-") &&
+                      cacheName != staticCacheName;
+              }).map((cacheName) => {
+                  return caches.delete(cacheName);
+              })
+          );
+      })
+  );
+});
+
+self.addEventListener("fetch", event => {
   event.respondWith(
-    caches.match(cacheRequest).then(response => {
-      return (
-        response ||
-        fetch(event.request)
-          .then(fetchResponse => {
-            return caches.open(cacheID).then(cache => {
-              cache.put(event.request, fetchResponse.clone());
-              return fetchResponse;
-            });
-          })
-          .catch(error => {
-            if (event.request.url.indexOf(".jpg") > -1) {
-              return caches.match("/img/na.png");
-            }
-            return new Response("Application is not connected to the internet", {
-              status: 404,
-              statusText: "Application is not connected to the internet"
-            });
-          })
-      );
-    })
+      caches.match(event.request).then((response) => {
+          if (response) return response;
+          return fetch (event.request);
+      })
   );
 });
