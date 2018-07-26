@@ -19,6 +19,7 @@ In a terminal, check the version of Python you have: `python -V`. If you have Py
 2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
 3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
 4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
+5. Alternately, if you are using VSC you can add the extension Live Server and run the provided code on port 5500. I used that for this project.
 
 ## Leaflet.js and Mapbox:
 
