@@ -237,14 +237,14 @@ nav h1 a {
   z-index: 1000;
 }
 */
-.inside #map-container {
+/*.inside #map-container {
   background: blue none repeat scroll 0 0;
   height: 200px;
   /*position: fixed;
   right: 0;
   top: 80px;
   width: 50%;*/
-}
+
 .inside #map {
   background-color: #ccc;
   height: 100%;
