@@ -230,20 +230,20 @@ nav h1 a {
 
 /* ====================== Restaurant Details ====================== */
 
-.inside header {
+/*.inside header {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 }
-
+*/
 .inside #map-container {
   background: blue none repeat scroll 0 0;
   height: 200px;
-  /*position: fixed;
+ /* position: fixed;
   right: 0;*/
   top: 80px;
-  width: 50%;
+  width: 100%;
 }
 
 .inside #map {
@@ -251,13 +251,13 @@ nav h1 a {
   height: 100%;
   width: 100%;
 }
-/*
+
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 100%;
 }
-*/
+
 #restaurant-name {
   color: #a85900;
   font-family: Arial, sans-serif;
