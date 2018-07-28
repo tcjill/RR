@@ -229,21 +229,22 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Details ====================== */
-/*
+
 .inside header {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 }
-*/
-/*.inside #map-container {
+
+.inside #map-container {
   background: blue none repeat scroll 0 0;
   height: 200px;
   /*position: fixed;
-  right: 0;
+  right: 0;*/
   top: 80px;
-  width: 50%;*/
+  width: 50%;
+}
 
 .inside #map {
   background-color: #ccc;
